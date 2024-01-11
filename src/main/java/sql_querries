@@ -1,0 +1,8 @@
+
+
+
+create table users(id serial primary key,username varchar,password varchar);
+create table roles(id serial primary key ,name varchar);
+create table permissions(id serial primary key ,name varchar);
+create table role_permission(id serial primary key,role_id int references roles(id),permission_id int references permissions(id));
+
